@@ -9,7 +9,8 @@
 
                       % Inputs %
 
-% ** data should be a 1-D array of voltages
+% ** data should be a 1-D array of voltages (works best
+%     on absolute value data)
 
 % ** T should be the duration of your target 
 %     disturbace. For example, if the signal from 
@@ -44,9 +45,9 @@ is = im - T;
 ie = im + T;
 strip = data;
 stripIndices = (is:ie);
-strip(stripIndices) = 0;
+strip(stripIndices) = 1E-9;
 
-cleaned = strip;
+cleaned = double(strip);
 
 end
 
