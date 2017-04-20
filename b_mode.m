@@ -4,7 +4,7 @@
 
 
 f = @process;
-pieFig('VGAtest/', f, 2*pi, 25);
+pieFig('exampleData/', f, 2*pi, 25);
 
 % Define any signal processing below
 % at minimum, data should be converted to type double
