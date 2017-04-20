@@ -1,5 +1,6 @@
 # b_mode
-Create 2D gray-scale visualizations of oscilloscope output. 
+Run b_mode.m to create 2D gray-scale visualizations of oscilloscope output. 
+For example output images, see the /exampleImages/ foler. 
 
 ##### Assumptions #####
 
@@ -21,6 +22,25 @@ Visualization Parameters
 1. gray-scale values are normalized according to the highest and lowest
     values in the first file of the directory
 2. scan angle was incremented at a constant rate
+
+
+#### Functions ####
+Two of the functions in this repo are used to generate 
+grayscale images. Those are pieFig and barFig, described below. 
+
+Other functions in this repo can be used to process data
+before imaging. These are sampleHold and cleanPeak. To read
+about how these functions alter your data, see the notes in 
+the function files. To see pictures of example outputs from 
+these functions, see the /exampleImages/functionBehaviors folder.
+
+Functions like sampleHold and cleanPeak should be added to 
+the signal processing algorithm section of your b_mode.m 
+script as described in the comments of the script. An example 
+use could be to see how your final image would look if you 
+had used a lower sampling rate on the analog signal, or 
+to see an image without a large outlier disturbance.
+
 
 
 ##### pieFig #####
