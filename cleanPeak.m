@@ -41,8 +41,17 @@ x(high_ind) = 1;
 r = xcorr(data, x);
 [pk, im] = max(r);
 im = im - length(x);
-is = im - T;
-ie = im + T;
+if im >= T
+    is = im - T;
+else
+    is = 0;
+end
+
+if im + T < length(x)
+    ie = im + T;
+else 
+    ie = length(x);
+end
 strip = data;
 stripIndices = (is:ie);
 strip(stripIndices) = 1E-9;
@@ -50,8 +59,3 @@ strip(stripIndices) = 1E-9;
 cleaned = double(strip);
 
 end
-
-
-
-
-
