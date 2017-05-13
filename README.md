@@ -1,6 +1,6 @@
 # b_mode
 Run b_mode.m to create 2D gray-scale visualizations of oscilloscope output. 
-For example output images, see the /exampleImages/ foler. 
+For example output images, see the /exampleImages/ folder. 
 
 ##### Assumptions #####
 
